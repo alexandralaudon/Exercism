@@ -1,5 +1,7 @@
 class Gigasecond
-  def self.from(start_time, giga = 10**9)
-    start_time + giga
+  GIGA = 1_000_000_000
+
+  def self.from(start_time)
+    start_time + GIGA
   end
 end
