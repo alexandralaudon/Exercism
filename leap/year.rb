@@ -6,6 +6,4 @@ class Year
 
     "#{yesno}, #{year} is a leap year"
   end
-
-
 end
