@@ -62,11 +62,8 @@ class FoodChainSong
     VERSES[portion-1]
   end
 
-  def verses(start,finish,song='')
-    (start..finish).each do |portion|
-      song += verse(portion) + "\n"
-    end
-    song
+  def verses(start,finish)
+    (start..finish).reduce('') {|total, portion| total << verse(portion) + "\n" }
   end
 
   def sing(song='')
