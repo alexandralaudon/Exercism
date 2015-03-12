@@ -1,9 +1,5 @@
 class Year
-  def self.leap?(year, answer = 'No')
-    unless year % 100 == 0 && year % 400 != 0
-      answer = 'Yes' if year % 4 == 0
-    end
-
-    "#{answer}, #{year} is a leap year"
+  def self.leap?(year)
+    year % 4 == 0 && (year % 100 != 0 && year % 400 == 0)
   end
 end
