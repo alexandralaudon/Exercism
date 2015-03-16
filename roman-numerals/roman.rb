@@ -1,6 +1,6 @@
 class Fixnum
 
-  ROM_CONVERSION = [
+  SYMBOLS = [
     ['M', 1000],
     ['CM', 900],
     ['D', 500],
@@ -18,8 +18,8 @@ class Fixnum
 
   def to_roman(value = self, roman = '', i=0)
     until value <= 0
-      roman << ROM_CONVERSION[i][0]*(value/(ROM_CONVERSION[i][1]))
-      value -= ROM_CONVERSION[i][1]*(value/(ROM_CONVERSION[i][1]))
+      roman << SYMBOLS[i][0]*(value/(SYMBOLS[i][1]))
+      value -= SYMBOLS[i][1]*(value/(SYMBOLS[i][1]))
       i+=1
     end
     return roman
