@@ -16,6 +16,11 @@ Decimal is a base-10 system.
 A number 23 in base 10 notation can be understood
 as a linear combination of powers of 10:
 
+i = binary.length
+
+
+binary[0]*2^2 + binary[1]*1^
+
 - The rightmost digit gets multiplied by 10^0 = 1
 - The next number gets multiplied by 10^1 = 10
 - ...
@@ -27,6 +32,8 @@ So: `23 => 2*10^1 + 3*10^0 => 2*10 + 3*1 = 23 base 10`
 Binary is similar, but uses powers of 2 rather than powers of 10.
 
 So: `101 => 1*2^2 + 0*2^1 + 1*2^0 => 1*4 + 0*2 + 1*1 => 4 + 1 => 5 base 10`.
+
+
 
 You will need the Minitest gem. To install it, open a
 terminal window and run:

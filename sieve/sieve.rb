@@ -8,7 +8,7 @@ class Sieve
     if index >= (range.length / 2) + 1
       range
     else
-      new_range = range.reject { |number| number % range[index] == 0 && number != range[index] }
+      remove_factors_of = range.reject { |number| number % range[index] == 0 && number != range[index] }
       primes(new_range, index + 1)
     end
   end
