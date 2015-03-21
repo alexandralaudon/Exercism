@@ -9,7 +9,7 @@ class Sieve
       range
     else
       remove_factors_of = range.reject { |number| number % range[index] == 0 && number != range[index] }
-      primes(new_range, index + 1)
+      primes(remove_factors_of, index + 1)
     end
   end
 end
